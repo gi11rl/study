@@ -69,7 +69,7 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header,
                 char* tmp = (char*) (packet + eth_header_len + ip_header_len + tcp_header_len);
                 memcpy(message, tmp, message_len);
 
-                printf("Message : %s\n", message);
+                printf("Message : %s\n", message); // message
                 free(message);
 
             }
