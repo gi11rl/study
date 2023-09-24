@@ -5,22 +5,6 @@
 #include <string.h>
 #include "myheader.h"
 
-void print_eth(struct ethheader *eth) {
-    u_char *src = eth->ether_shost;
-    u_char *dst = eth->ether_dhost;
-
-
-    printf("[MAC] From: ");
-    printf("%02X:%02X:%02X:%02X:%02X:%02X\n", src[0], src[1], src[2], src[3], src[4], src[5]);
-
-
-    printf("[MAC] To: " );
-    printf("%02X:%02X:%02X:%02X:%02X:%02X\n", dst[0], dst[1], dst[2], dst[3], dst[4], dst[5]);
-
-    return;
-}
-
-
 void got_packet(u_char *args, const struct pcap_pkthdr *header,
                               const u_char *packet)
 {
